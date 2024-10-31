@@ -1,11 +1,4 @@
-# secret_scrimmage_lineup_guesser/data_processing.py
-
 import pandas as pd
-
-
-def load_data(filepath: str) -> pd.DataFrame:
-    df = pd.read_csv(filepath)
-    return df
 
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
@@ -17,7 +10,6 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
             - min (int): Minutes played
             - sec (int): Seconds played
             - plus_minus (int): Player's plus/minus for the game
-            - allowed_positions (str): Allowed positions for the player (1-5, separated by underscores)
 
     Returns:
         pd.DataFrame: Processed DataFrame with additional columns:
